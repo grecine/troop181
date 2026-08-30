@@ -1,15 +1,17 @@
 {
   "name": "Troop 181",
   "theme": {
-    "maxWidth": "900px",
-    "fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-    "pageBackground": "#ffffff",
-    "headerBackground": "#f7f9fc",
-    "accent": "#1f8ef1",
-    "accentHover": "#0b6fc7",
-    "navigationText": "#174f86",
-    "text": "#111111",
-    "mutedText": "#666666",
-    "border": "#e6eef8"
+    "maxWidth": "1100px",
+    "fontFamily": "'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif",
+    "headingFont": "'DM Serif Display', Georgia, serif",
+    "pageBackground": "#f4f7f5",
+    "surface": "#ffffff",
+    "headerBackground": "#092f3f",
+    "accent": "#d71920",
+    "accentHover": "#aa1117",
+    "navigationText": "#f7fbfb",
+    "text": "#18343c",
+    "mutedText": "#5f7379",
+    "border": "#d5e1df"
   }
 }

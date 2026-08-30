@@ -4,12 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{ title | default(site.name) }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/styles.css">
     <style>
       :root {
         --max-width: {{ site.theme.maxWidth }};
-        --font-family: {{ site.theme.fontFamily }};
+        --font-family: {{ site.theme.fontFamily | safe }};
+        --heading-font: {{ site.theme.headingFont | safe }};
         --page-background: {{ site.theme.pageBackground }};
+        --surface: {{ site.theme.surface }};
         --header-background: {{ site.theme.headerBackground }};
         --accent: {{ site.theme.accent }};
         --accent-hover: {{ site.theme.accentHover }};
@@ -22,26 +27,29 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="wrap">
-        <h1 class="site-title"><a href="/">{{ site.name }}</a></h1>
+      <div class="wrap site-header-inner">
+        <a class="site-brand" href="/" aria-label="{{ site.name }} home">
+          <img class="scouting-logo" src="/assets/scouting-america-logo.png" alt="Scouting America">
+          <span class="site-name">{{ site.name }}</span>
+        </a>
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="/">Welcome</a>
+          <a href="/"{% if url == "/" %} aria-current="page"{% endif %}>Welcome</a>
           {% for page in collections.sitePages %}
             {% if page.url != "/" %}
-              <a href="{{ page.url }}">{{ page.data.title }}</a>
+              <a href="{{ page.url }}"{% if page.url == url %} aria-current="page"{% endif %}>{{ page.data.title }}</a>
             {% endif %}
           {% endfor %}
         </nav>
       </div>
     </header>
 
-    <main class="wrap">
+    <main class="wrap site-main">
       {{ content | safe }}
     </main>
 
     <footer class="site-footer">
       <div class="wrap">
-        <p>{{ site.name }} — Edit pages via the GitHub web UI.</p>
+        <p>{{ site.name }} <span aria-hidden="true">·</span> Scouting America</p>
       </div>
     </footer>
   </body>

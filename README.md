@@ -32,9 +32,11 @@ To edit a page in GitHub, open the file under `src/content`, select the pencil i
 
 ## Changing the theme
 
-Edit `src/_data/site.json` to change the site's name, colors, font, or maximum content width in one place. For example, changing `accent` updates the Troop 181 title and other blue highlights across the whole site.
+Edit `src/_data/site.json` to change the site's name, colors, fonts, or maximum content width in one place. For example, changing `accent` updates buttons and the active navigation item across the whole site.
 
-The default values are valid CSS values: use a hex color such as `"#0f5b2f"`, a CSS font stack, or a width such as `"960px"`. Keep the quotation marks and commas intact so the file remains valid JSON.
+The default values are valid CSS values: use a hex color such as `"#0f5b2f"`, a CSS font stack, or a width such as `"960px"`. The site loads DM Sans for body text and DM Serif Display for headings. Keep the quotation marks and commas intact so the file remains valid JSON.
+
+The header uses the official Scouting America wordmark in `src/assets/scouting-america-logo.png`. Use it in accordance with Scouting America brand guidance.
 
 ## Deployment
 

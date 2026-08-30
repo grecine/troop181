@@ -1,11 +1,42 @@
 *{box-sizing:border-box}
-body{font-family:var(--font-family);line-height:1.6;margin:0;color:var(--text);background:var(--page-background)}
-.wrap{max-width:var(--max-width);margin:0 auto;padding:24px}
-.site-header{background:var(--header-background);border-bottom:1px solid var(--border)}
-.site-title{margin:0;font-size:20px}
-.site-title a{text-decoration:none;color:var(--accent)}
-.site-nav{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px}
-.site-nav a{color:var(--navigation-text);text-decoration:none}
-.site-nav a:hover,.site-nav a:focus{color:var(--accent-hover);text-decoration:underline}
-.site-footer{border-top:1px solid var(--border);color:var(--muted-text);font-size:14px;padding:12px 24px}
-iframe{max-width:100%}
+html{background:var(--header-background)}
+body{font-family:var(--font-family);font-size:16px;line-height:1.65;margin:0;color:var(--text);background:var(--page-background)}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:0 28px}
+.site-header{background:var(--header-background);border-top:5px solid var(--accent);box-shadow:0 3px 18px rgba(4,29,39,.18)}
+.site-header-inner{min-height:108px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.site-brand{display:flex;align-items:center;gap:18px;color:var(--navigation-text);text-decoration:none;min-width:0}
+.scouting-logo{display:block;width:218px;height:auto;max-width:46vw}
+.site-name{border-left:1px solid rgba(255,255,255,.32);font-size:15px;font-weight:700;letter-spacing:.08em;padding-left:18px;text-transform:uppercase;white-space:nowrap}
+.site-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px;margin:0}
+.site-nav a{border-radius:999px;color:var(--navigation-text);font-size:15px;font-weight:700;letter-spacing:.01em;padding:8px 13px;text-decoration:none;transition:background-color .18s ease,color .18s ease}
+.site-nav a:hover,.site-nav a:focus{background:rgba(255,255,255,.14);color:#fff}
+.site-nav a[aria-current="page"]{background:var(--accent);color:#fff}
+.site-main{min-height:calc(100vh - 190px);padding-top:60px;padding-bottom:76px}
+.site-main h1,.site-main h2,.site-main h3{color:var(--text);font-family:var(--heading-font);font-weight:400;line-height:1.12}
+.site-main h1{font-size:clamp(2.4rem,5vw,4.5rem);letter-spacing:-.03em;margin:0 0 20px}
+.site-main h2{font-size:clamp(1.8rem,3vw,2.6rem);margin:48px 0 16px}
+.site-main p{max-width:72ch}
+.site-main a{color:var(--accent-hover);font-weight:700;text-underline-offset:3px}
+.site-main a:hover,.site-main a:focus{color:var(--accent)}
+.hero{background:var(--surface);border:1px solid var(--border);border-radius:24px;box-shadow:0 18px 45px rgba(25,62,66,.08);padding:clamp(36px,7vw,80px);position:relative;overflow:hidden}
+.hero::after{background:var(--accent);border-radius:50%;content:"";height:240px;opacity:.08;position:absolute;right:-85px;top:-100px;width:240px}
+.eyebrow{color:var(--accent)!important;font-size:13px;font-weight:700;letter-spacing:.15em;margin:0 0 14px!important;text-transform:uppercase}
+.hero h1{max-width:13ch;position:relative;z-index:1}
+.lede{color:var(--muted-text);font-size:clamp(1.1rem,2vw,1.3rem);margin-bottom:30px;position:relative;z-index:1}
+.button{background:var(--accent);border-radius:999px;color:#fff!important;display:inline-block;font-size:16px;font-weight:700;padding:12px 20px;text-decoration:none!important;transition:background-color .18s ease,transform .18s ease}
+.button:hover,.button:focus{background:var(--accent-hover);transform:translateY(-1px)}
+.calendar-frame{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 12px 30px rgba(25,62,66,.06);margin-top:28px;overflow:hidden;padding:12px}
+iframe{display:block;max-width:100%;width:100%}
+.site-footer{background:var(--header-background);color:rgba(255,255,255,.72);font-size:14px;padding:26px 0}
+.site-footer p{margin:0}
+@media (max-width:760px){
+  .wrap{padding-left:20px;padding-right:20px}
+  .site-header-inner{align-items:flex-start;flex-direction:column;gap:16px;padding-bottom:20px;padding-top:20px}
+  .site-brand{gap:12px}
+  .scouting-logo{width:190px}
+  .site-name{font-size:12px;padding-left:12px}
+  .site-nav{justify-content:flex-start;width:100%}
+  .site-main{padding-bottom:52px;padding-top:34px}
+  .hero{border-radius:18px;padding:32px 26px}
+  .calendar-frame{margin-left:-8px;margin-right:-8px;padding:8px}
+}
