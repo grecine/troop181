@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ title | default("Troop 181") }}</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title"><a href="/">Troop 181</a></h1>
+      </div>
+    </header>
+
+    <main class="wrap">
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Troop 181 — static site scaffold. Edit pages via the GitHub web UI.</p>
+      </div>
+    </footer>
+  </body>
+</html>
