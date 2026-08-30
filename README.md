@@ -1,41 +1,58 @@
-# Troop 181 — Eleventy scaffold
+# Troop 181 website
 
-This branch adds a minimal Eleventy scaffold and a placeholder page with an embedded Google Calendar iframe (placeholder). Non-technical editors can update content using the GitHub web UI.
+A simple, static Troop 181 website built with [Eleventy](https://www.11ty.dev/). Pages are Markdown files, so they can be edited directly in GitHub without special software.
 
-Files added
-- package.json — scripts to run Eleventy
-- .eleventy.js — Eleventy configuration (input: src/, output: _site/)
-- src/content/index.md — placeholder homepage with calendar iframe placeholder
-- src/_includes/layouts/base.njk — simple layout
-- src/assets/styles.css — minimal styles
-- .gitignore
+## Current pages
 
-How to edit pages (non-technical)
-- Go to the repository on GitHub → navigate to a file under src/content (for example src/content/index.md) → click the pencil icon to edit → commit the change directly to the branch or open a PR.
+- `src/content/index.md` is the **Welcome** page at `/`.
+- `src/content/calendar-and-events.md` is the **Calendar & Events** page at `/calendar-and-events/`.
 
-Replace the calendar placeholder
-1. In Google Calendar: Settings → Select your calendar → Access permissions → check "Make available to public" if you want it embedded publicly.
-2. Settings → Integrate calendar → copy the "Calendar ID" (looks like an email: abcd1234@group.calendar.google.com).
-3. Edit src/content/index.md and replace CALENDAR_ID in the iframe src with your Calendar ID.
+## Adding and editing pages
 
-Deploy to Cloudflare Pages
-- Connect this repository to Cloudflare Pages.
-- Framework preset: Eleventy
-- Build command: npm run build
-- Build output directory: _site
-- (If you prefer, set Framework preset to "None" and use the same build command/output.)
+Add a Markdown file anywhere under `src/content`. Its filename becomes its public URL without `/content/`, and it automatically appears in the header navigation.
 
-Preview locally
-- Install dependencies and run Eleventy locally:
-  1. npm install
-  2. npm run dev   # Eleventy local server and watch
+- `src/content/about.md` becomes `/about/`
+- `src/content/resources/forms.md` becomes `/resources/forms/`
 
-Or build and serve the static output:
-  1. npm install
-  2. npm run build
-  3. npx http-server _site -p 8080
+The filename also becomes the page title and navigation label. To use a different title, add this at the top of the file:
 
-Notes
-- This scaffold intentionally keeps things small and easy to edit. If you want more features (collections, blog, pagination, shortcodes), I can extend the Eleventy config.
-- I did not add a LICENSE file per your request.
+  ```md
+  ---
+  title: "Permission Forms"
+  ---
+  ```
 
+To edit a page in GitHub, open the file under `src/content`, select the pencil icon, make the change, and commit it to the `main` branch. Cloudflare then rebuilds the site automatically.
+
+## Link to the troop calendar
+
+1. In Google Calendar, select the troop calendar. Under **Settings and sharing**, make it available to the public if it will be embedded publicly.
+2. Under **Integrate calendar**, copy the **Calendar ID** (it looks like an email address, such as `abcd1234@group.calendar.google.com`).
+3. Edit `src/content/calendar-and-events.md` and replace `CALENDAR_ID` in the iframe URL with that ID.
+
+## Deployment
+
+This repository is connected to Cloudflare Workers through GitHub. Every push to `main` triggers a production build and deployment. The Eleventy build command is:
+
+```sh
+npm run build
+```
+
+The generated static site is written to `_site/`.
+
+## Preview locally
+
+Install dependencies and start the local development server:
+
+```sh
+npm install
+npm run dev
+```
+
+Then open [http://localhost:8080](http://localhost:8080).
+
+To build the static output without starting the development server:
+
+```sh
+npm run build
+```

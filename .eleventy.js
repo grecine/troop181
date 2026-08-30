@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
   // Passthrough for static assets
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addCollection("sitePages", (collection) =>
+    collection.getFilteredByGlob("src/content/**/*.md")
+  );
 
   return {
     dir: {

@@ -10,6 +10,14 @@
     <header class="site-header">
       <div class="wrap">
         <h1 class="site-title"><a href="/">Troop 181</a></h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/">Welcome</a>
+          {% for page in collections.sitePages %}
+            {% if page.url != "/" %}
+              <a href="{{ page.url }}">{{ page.data.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
       </div>
     </header>
 
