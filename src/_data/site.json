@@ -1,0 +1,15 @@
+{
+  "name": "Troop 181",
+  "theme": {
+    "maxWidth": "900px",
+    "fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "pageBackground": "#ffffff",
+    "headerBackground": "#f7f9fc",
+    "accent": "#1f8ef1",
+    "accentHover": "#0b6fc7",
+    "navigationText": "#174f86",
+    "text": "#111111",
+    "mutedText": "#666666",
+    "border": "#e6eef8"
+  }
+}

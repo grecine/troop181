@@ -30,6 +30,12 @@ To edit a page in GitHub, open the file under `src/content`, select the pencil i
 2. Under **Integrate calendar**, copy the **Calendar ID** (it looks like an email address, such as `abcd1234@group.calendar.google.com`).
 3. Edit `src/content/calendar-and-events.md` and replace `CALENDAR_ID` in the iframe URL with that ID.
 
+## Changing the theme
+
+Edit `src/_data/site.json` to change the site's name, colors, font, or maximum content width in one place. For example, changing `accent` updates the Troop 181 title and other blue highlights across the whole site.
+
+The default values are valid CSS values: use a hex color such as `"#0f5b2f"`, a CSS font stack, or a width such as `"960px"`. Keep the quotation marks and commas intact so the file remains valid JSON.
+
 ## Deployment
 
 This repository is connected to Cloudflare Workers through GitHub. Every push to `main` triggers a production build and deployment. The Eleventy build command is:
