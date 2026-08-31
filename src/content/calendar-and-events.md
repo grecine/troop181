@@ -8,7 +8,7 @@ navOrder: 1
 
 # Calendar & Events
 
-Keep up with troop meetings, campouts, service projects, and other upcoming activities.
+Keep up with troop meetings, trips, service projects, and other upcoming activities.
 
 </div>
 
