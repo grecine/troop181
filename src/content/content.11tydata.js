@@ -8,6 +8,8 @@ function titleFromSlug(slug) {
 
 module.exports = {
   layout: "layouts/base.njk",
+  showInNav: true,
+  navOrder: 999,
   eleventyComputed: {
     title: (data) => data.title || titleFromSlug(data.page.fileSlug)
   },

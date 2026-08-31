@@ -26,6 +26,7 @@ body{font-family:var(--font-family);font-size:16px;line-height:1.65;margin:0;col
 .button{background:var(--accent);border-radius:999px;color:#fff!important;display:inline-block;font-size:16px;font-weight:700;padding:12px 20px;text-decoration:none!important;transition:background-color .18s ease,transform .18s ease}
 .button:hover,.button:focus{background:var(--accent-hover);transform:translateY(-1px)}
 .calendar-frame{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 12px 30px rgba(25,62,66,.06);margin-top:28px;overflow:hidden;padding:12px}
+.calendar-placeholder{background:var(--surface);border:1px dashed var(--border);border-radius:18px;color:var(--muted-text);margin-top:28px;padding:24px}
 iframe{display:block;max-width:100%;width:100%}
 .site-footer{background:var(--header-background);color:rgba(255,255,255,.72);font-size:14px;padding:26px 0}
 .site-footer p{margin:0}

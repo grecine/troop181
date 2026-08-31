@@ -1,5 +1,9 @@
 {
   "name": "Troop 181",
+  "url": "",
+  "calendarId": "",
+  "timezone": "America/New_York",
+  "contactEmail": "",
   "theme": {
     "maxWidth": "1100px",
     "fontFamily": "'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif",

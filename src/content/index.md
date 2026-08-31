@@ -1,10 +1,11 @@
 ---
 title: "Welcome"
+hero:
+  eyebrow: "Welcome to Troop 181"
+  heading: "Adventure, service, and leadership start here."
+  lede: "Find troop information, upcoming events, and useful resources for Scouts and their families."
+  buttonText: "View calendar & events"
+  buttonHref: "/calendar-and-events/"
 ---
 
-<section class="hero">
-  <p class="eyebrow">Welcome to Troop 181</p>
-  <h1>Adventure, service, and leadership start here.</h1>
-  <p class="lede">Find troop information, upcoming events, and useful resources for Scouts and their families.</p>
-  <p><a class="button" href="/calendar-and-events/">View calendar &amp; events</a></p>
-</section>
+{% include "components/hero.njk" %}

@@ -1,0 +1,8 @@
+<section class="hero">
+  <p class="eyebrow">{{ hero.eyebrow }}</p>
+  <h1>{{ hero.heading }}</h1>
+  <p class="lede">{{ hero.lede }}</p>
+  {% if hero.buttonText and hero.buttonHref %}
+    <p><a class="button" href="{{ hero.buttonHref }}">{{ hero.buttonText }}</a></p>
+  {% endif %}
+</section>

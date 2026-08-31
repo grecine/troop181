@@ -1,0 +1,33 @@
+name: Content update
+description: Add or update a troop website page
+title: "[content] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for new pages or text updates. Volunteers can also edit files directly in `src/content/` on GitHub.
+  - type: input
+    id: page-title
+    attributes:
+      label: Page title
+      placeholder: "About Us"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What should the page say or change?
+      placeholder: Describe the content you want added or updated.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Desired URL path (optional)
+      placeholder: "/about/"
+  - type: input
+    id: contact
+    attributes:
+      label: Your name or email (optional)
+      placeholder: So a maintainer can follow up

@@ -1,0 +1,7 @@
+# Default reviewers for pull requests
+* @grecine
+
+# Build, layout, and automation
+.eleventy.js @grecine
+.github/ @grecine
+src/_includes/ @grecine

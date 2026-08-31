@@ -34,10 +34,8 @@
         </a>
         <nav class="site-nav" aria-label="Main navigation">
           <a href="/"{% if url == "/" %} aria-current="page"{% endif %}>Welcome</a>
-          {% for page in collections.sitePages %}
-            {% if page.url != "/" %}
-              <a href="{{ page.url }}"{% if page.url == url %} aria-current="page"{% endif %}>{{ page.data.title }}</a>
-            {% endif %}
+          {% for page in collections.navPages %}
+            <a href="{{ page.url }}"{% if page.url == url %} aria-current="page"{% endif %}>{{ page.data.title }}</a>
           {% endfor %}
         </nav>
       </div>
