@@ -27,7 +27,7 @@ Always run `npm run build` after structural changes to verify the site compiles.
 | `src/_data/site.json` | Troop-wide settings: name, URL, calendar ID, theme colors. |
 | `src/_includes/layouts/` | Page shells. Edit only for layout/navigation changes. |
 | `src/_includes/components/` | Reusable partials (hero, calendar embed). Prefer these over inline HTML in Markdown. |
-| `src/assets/` | Static assets (`styles.css`, logos). |
+| `src/assets/` | Static assets (`styles.css`, `favicon.svg`, logos). |
 | `.eleventy.js` | Build config, collections, CI warnings. |
 | `_site/` | Build output. **Never edit.** |
 | `node_modules/` | Dependencies. **Never edit.** |
@@ -42,6 +42,7 @@ Always run `npm run build` after structural changes to verify the site compiles.
 ```yaml
 ---
 title: "About Us"
+description: "Short summary for search engines and link previews."
 navOrder: 2
 showInNav: true
 ---
@@ -64,8 +65,9 @@ Edit `src/_data/site.json`:
 | Field | Purpose |
 |-------|---------|
 | `name` | Troop name shown in header/footer |
-| `url` | Public site URL (for future SEO/sitemap use) |
+| `url` | Public site URL, no trailing slash (e.g. `https://troop181.org`). Enables canonical and Open Graph tags. |
 | `calendarId` | Google Calendar ID for the events embed |
+| `demoCalendarId` | Public calendar shown when `calendarId` is empty (default: US holidays) |
 | `timezone` | IANA timezone for calendar embed (default `America/New_York`) |
 | `contactEmail` | Troop contact email (reserved for future use) |
 | `theme.*` | Colors, fonts, max width |
@@ -130,3 +132,7 @@ See `CONTRIBUTING.md` for a non-technical guide aimed at troop volunteers editin
 3. For new pages, set `title`, `navOrder`, and `showInNav` in front matter.
 4. Run `npm run build` and fix any errors before finishing.
 5. Update `README.md` only when user-facing workflows change.
+
+## Future ideas
+
+See `TODO.md` for a backlog of optional improvements (sitemap, link checker, branch protection, etc.).

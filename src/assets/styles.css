@@ -25,6 +25,9 @@ body{font-family:var(--font-family);font-size:16px;line-height:1.65;margin:0;col
 .lede{color:var(--muted-text);font-size:clamp(1.1rem,2vw,1.3rem);margin-bottom:30px;position:relative;z-index:1}
 .button{background:var(--accent);border-radius:999px;color:#fff!important;display:inline-block;font-size:16px;font-weight:700;padding:12px 20px;text-decoration:none!important;transition:background-color .18s ease,transform .18s ease}
 .button:hover,.button:focus{background:var(--accent-hover);transform:translateY(-1px)}
+.button-secondary{background:transparent;border:2px solid var(--accent);color:var(--accent-hover)!important;margin-left:8px}
+.button-secondary:hover,.button-secondary:focus{background:rgba(215,25,32,.08);transform:translateY(-1px)}
+.error-page .button{margin-top:8px}
 .calendar-frame{background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 12px 30px rgba(25,62,66,.06);margin-top:28px;overflow:hidden;padding:12px}
 .calendar-placeholder{background:var(--surface);border:1px dashed var(--border);border-radius:18px;color:var(--muted-text);margin-top:28px;padding:24px}
 iframe{display:block;max-width:100%;width:100%}

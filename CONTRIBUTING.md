@@ -29,6 +29,7 @@ Thank you for helping keep the Troop 181 website up to date. You do not need spe
 ```md
 ---
 title: "Your Page Title"
+description: "Short summary for search engines and link previews."
 navOrder: 3
 ---
 

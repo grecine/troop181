@@ -2,6 +2,16 @@ const siteData = require("./src/_data/site.json");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({
+    "src/assets/favicon.png": "favicon.png"
+  });
+
+  eleventyConfig.addFilter("absoluteUrl", (pageUrl, baseUrl) => {
+    if (!baseUrl || !pageUrl) {
+      return "";
+    }
+    return `${baseUrl.replace(/\/$/, "")}${pageUrl}`;
+  });
 
   eleventyConfig.addCollection("sitePages", (collection) =>
     collection.getFilteredByGlob("src/content/**/*.md")

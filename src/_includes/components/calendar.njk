@@ -1,14 +1,14 @@
-{% if site.calendarId %}
+{% set calendarSrc = site.calendarId or site.demoCalendarId %}
 <div class="calendar-frame">
   <iframe
     title="{{ site.name }} calendar"
-    src="https://calendar.google.com/calendar/embed?src={{ site.calendarId | urlencode }}&ctz={{ site.timezone | replace('/', '%2F') }}"
+    src="https://calendar.google.com/calendar/embed?src={{ calendarSrc | urlencode }}&ctz={{ site.timezone | replace('/', '%2F') }}"
     style="border:0"
     height="600"
     frameborder="0"
     scrolling="no"
   ></iframe>
 </div>
-{% else %}
-<p class="calendar-placeholder">The troop calendar will appear here after <code>calendarId</code> is set in <code>src/_data/site.json</code>.</p>
+{% if not site.calendarId %}
+<p class="calendar-placeholder">This is a demo calendar. Troop 181 events will appear here after <code>calendarId</code> is set in <code>src/_data/site.json</code>.</p>
 {% endif %}

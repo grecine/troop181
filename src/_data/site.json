@@ -2,6 +2,7 @@
   "name": "Troop 181",
   "url": "",
   "calendarId": "",
+  "demoCalendarId": "en.usa#holiday@group.v.calendar.google.com",
   "timezone": "America/New_York",
   "contactEmail": "",
   "theme": {

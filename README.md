@@ -4,6 +4,7 @@ A simple, static Troop 181 website built with [Eleventy](https://www.11ty.dev/).
 
 - **Volunteers:** see [CONTRIBUTING.md](CONTRIBUTING.md) for how to edit content.
 - **Developers / AI agents:** see [AGENTS.md](AGENTS.md) for project structure and conventions.
+- **Future ideas:** see [TODO.md](TODO.md).
 
 ## Current pages
 
@@ -22,11 +23,12 @@ The filename also becomes the page title and navigation label. To use a differen
 ```md
 ---
 title: "Permission Forms"
+description: "Download permission forms for Troop 181 activities."
 navOrder: 2
 ---
 ```
 
-Use `navOrder` to control navigation order (lower numbers appear first). Use `showInNav: false` to hide a page from the menu.
+Use `navOrder` to control navigation order (lower numbers appear first). Use `showInNav: false` to hide a page from the menu. Add `description` for search engines and social link previews.
 
 To edit a page in GitHub, open the file under `src/content`, select the pencil icon, make the change, and commit it to the `main` branch. Cloudflare then rebuilds the site automatically.
 
@@ -34,8 +36,8 @@ To edit a page in GitHub, open the file under `src/content`, select the pencil i
 
 Troop-wide settings live in `src/_data/site.json`:
 
-- `name`, `url`, `contactEmail` — troop identity and contact info
-- `calendarId` — Google Calendar ID for the events page embed
+- `name`, `url`, `contactEmail` — troop identity and contact info (`url` enables canonical/Open Graph tags when set)
+- `calendarId` — Google Calendar ID for the events page embed (shows a demo calendar until set)
 - `timezone` — calendar timezone (default `America/New_York`)
 - `theme` — colors, fonts, and layout width
 

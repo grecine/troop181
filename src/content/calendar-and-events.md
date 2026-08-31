@@ -1,5 +1,6 @@
 ---
 title: "Calendar & Events"
+description: "Upcoming Troop 181 meetings, campouts, service projects, and activities."
 navOrder: 1
 ---
 

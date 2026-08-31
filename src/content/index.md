@@ -1,5 +1,6 @@
 ---
 title: "Welcome"
+description: "Troop 181 — adventure, service, and leadership. Find troop information, events, and resources for Scouts and families."
 hero:
   eyebrow: "Welcome to Troop 181"
   heading: "Adventure, service, and leadership start here."
