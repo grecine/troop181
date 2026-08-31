@@ -29,6 +29,7 @@ Always run `npm run build` after structural changes to verify the site compiles.
 | `src/_includes/components/` | Reusable partials (hero, calendar embed). Prefer these over inline HTML in Markdown. |
 | `src/assets/` | Static assets (`styles.css`, `favicon.svg`, logos). |
 | `.eleventy.js` | Build config, collections, CI warnings. |
+| `wrangler.jsonc` | Cloudflare Workers Static Assets deployment configuration. |
 | `_site/` | Build output. **Never edit.** |
 | `node_modules/` | Dependencies. **Never edit.** |
 
