@@ -11,6 +11,6 @@
     "start": "npx http-server _site -p 8080"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.7"
   }
 }
